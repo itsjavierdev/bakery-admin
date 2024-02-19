@@ -1,66 +1,284 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
-
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+<p>   
+    <img src="https://github.com/itsjavierdev/bakery-admin/assets/156542069/07c18365-f44e-48f7-8c9a-8ed801165ed2" alt="logo" align="left" width="80" height="auto" ></img>
 </p>
 
-## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+# Admin Dashboard Bakery San Xavier
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+This project, an Online Bakery Shop, provides a robust platform for bakeries to streamline their operations and enable customers to conveniently place orders online. It features a user-friendly interface for product browsing, a secure shopping cart system, and a seamless checkout process. The application is designed to enhance the efficiency of bakery businesses by digitizing the ordering process and providing a smooth online experience for customers. Developers can explore the codebase to understand the implementation details and contribute to the project's growth.
 
-## Learning Laravel
+## 💻 Technologies:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+![Laravel](https://img.shields.io/badge/laravel-%23FF2D20.svg?style=for-the-badge&logo=laravel&logoColor=white)  ![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white)  ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) 
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+---
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+>[!IMPORTANT]
+>This project complements with the bakery shop: https://github.com/itsjavierdev/bakery-client
 
-## Laravel Sponsors
+---
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## 👩🏻‍💻 Installation:
 
-### Premium Partners
+First you have to install: <a href="https://laragon.org/download/index.html"><img src="https://cdn.worldvectorlogo.com/logos/laragon.svg" width="20"/> Laragon </a> 
+Then clone this repository in: 
+> c:\laragon\www
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+with
+```
+git clone git@github.com:itsjavierdev/bakery-admin.git
+```
+### Run all this command lines in the laragon terminal
+Install composer and node module
 
-## Contributing
+```
+composer install
+npm i
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Create .env and generate encryption key
+```
+cp .env.example .env
+php artisan key:generate
+```
 
-## Code of Conduct
+Clean cache in framework
+```
+composer dump-autoload 
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Create symbolic link from public folder to storage folder
+```
+php artisan storage:link
+```
 
-## Security Vulnerabilities
+Run the migrations, to set the database and seeders
+```
+php artisan migrate --database=admin_connection --seed
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## 🏃🏻‍♂️ Run the aplication:
 
-## License
+####  Run these two command line in laragon different terminal
+For run the styles
+```
+npm run dev
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+For run the server
+```
+php artisan serve
+```
+
+## 🔑 First Authenticate:
+
+####  Email
+`admin@gmail.com`
+
+####  Password
+`password`
+
+
+## 📁 File Structure
+
+#### Controllers
+I use livewire so, the controllers just was used for static routes controller with and without params
+```
+└─  app
+   └─  Http
+      └─ Controllers
+         ├─ Controller.php
+         └─ RegisteredUserController.php   //controller for create user
+```
+
+#### Models
+This side of the bakery system connect with two database, so the customer folder have the user model (customer)
+and the files in model without folder have all the other models including the user model (admin and employees)
+```
+└─  app
+    ├─ Models
+       ├─ Customer
+       │  └─ User.php
+       ├─ Order.php
+       ├─ User.php
+       └─ ...
+```
+
+#### Livewire components
+Components where separate in folders for each view with them show (table) and form (modal)
+
+And dashboard have component for each chart it have
+
+Form folder have all the crud form (for separate Create and Edit rule logic, and have a cleanest code)
+```
+└─ app
+   └─ Livewire
+      ├─ Categories
+      │  ├─ FormCategories.php
+      │  └─ ShowCategories.php
+      ├─ Dashboard
+      │  ├─ Products
+      │  │  ├─ ProductsLessPopular.php
+      │  │  └─ ...
+      │  ├─ Sales
+      │  │  ├─ SalesLastWeek.php
+      │  │  └─ ...
+      │  ├─ ShowCharts.php
+      │  └─ ShowDashboard.php
+      ├─ Forms
+      │  ├─ Categories
+      │  │  ├─ CreateFormCategories.php
+      │  │  └─ EditFormCategories.php
+      │  ├─ Products
+      │  │  └─ ...
+      │  └─ Roles
+      │     └─ ...
+      ├─ Orders
+      │  └─ ...
+      ├─ Products
+      │  └─ ...
+      ├─ Roles
+      │  └─ ..
+      ├─ Sales
+      │  └─ ...
+      └─ Users
+         └─ ...   
+```
+
+#### Views
+
+```
+└─ resources
+   └─ views
+      ├─ api
+      ├─ auth            //auth have all views for login, register and similar auth components
+      ├─ components      //all components blade (jestream and custom)
+      ├─ dashboard.blade.php
+      ├─ layouts         //layout for all app
+      ├─ livewire        //dinamic livewire components /used by static views)
+      ├─ navigation-menu.blade.php
+      ├─ policy.blade.php
+      ├─ profile        //All profile user views functions
+      └─ statics         //all static views
+```
+
+#### Components
+
+In folders are the own custom components
+And the others are the jetstream components, used in auth views
+
+```
+├─ components
+  ├─ button
+  │  ├─ blue.blade.php
+  │  └─ ...
+  ├─ admin
+  │  └─ ...
+  ├─ input
+  │  └─ ...
+  ├─ input-error.blade.php
+  ├─ switchable-team.blade.php
+  └─ ...
+```
+
+#### Statics and dinamics views
+
+Livewire folder have a folder for each crud with them show (table) and form (modal)
+
+And Static folder have a single file for each crud
+
+dashboard folder have a component for each chart
+
+```
+├─ static
+|  ├─ sales.blade.php
+|  └─ ...
+├─ livewire
+│  ├─ categories
+│  │  ├─ form-categories.blade.php
+│  │  └─ ...
+│  ├─ dashboard
+│  │  ├─ products
+│  │  │  ├─ products-less-popular.blade.php
+|  │  │  └─ ...
+│  │  ├─ sales
+|  │  │  └─ ...
+│  │  ├─ show-charts.blade.php
+│  │  └─ show-dashboard.blade.php
+│  ├─ orders
+│  │  └─ ...
+│  ├─ products
+│  │  └─ ...
+│  ├─ roles
+│  │  └─ ...
+│  ├─ sales
+│  │  └─ ...
+│  └─ users
+│     └─ ...
+```
+## 💻 Demo ScreenShoots
+### Login View
+![image](https://github.com/itsjavierdev/bakery-admin/assets/156542069/0beba894-027a-43de-b08f-f2b66e4b8faa)
+
+---
+### Dashboard View
+![image](https://github.com/itsjavierdev/bakery-admin/assets/156542069/8ac98834-7cec-46d4-8c2f-eb37644f0f4a)
+
+---
+### Categories CRUD View
+![image](https://github.com/itsjavierdev/bakery-admin/assets/156542069/31e9f782-986d-4236-943b-d058d1f8beb4)
+
+---
+### Categories Create-Edit Modal
+![image](https://github.com/itsjavierdev/bakery-admin/assets/156542069/07bd37f3-2682-4f0c-be38-4943fe0412f8)
+
+---
+### Product CRUD View
+![image](https://github.com/itsjavierdev/bakery-admin/assets/156542069/a24c438d-3176-4098-94d7-fdfe5a4f638d)
+
+---
+### Product Create-Edit Modal
+![image](https://github.com/itsjavierdev/bakery-admin/assets/156542069/d8d5cb89-be0c-4ed5-854e-f4f0d554e697)
+
+---
+### Ordes View
+![image](https://github.com/itsjavierdev/bakery-admin/assets/156542069/730b4d58-b0ba-40fe-a9ac-040d5ff5ddd2)
+
+---
+### Order Detail
+![image](https://github.com/itsjavierdev/bakery-admin/assets/156542069/b5d47beb-3982-445e-9d73-adddb18010f4)
+
+---
+### Sales View
+![image](https://github.com/itsjavierdev/bakery-admin/assets/156542069/783e4efb-db80-4364-9910-47d3e660a585)
+
+---
+### Sale Detail View
+![image](https://github.com/itsjavierdev/bakery-admin/assets/156542069/83a7ade5-b234-4f44-b2fe-6595315543ad)
+
+---
+### User or Employees CRUD view
+![image](https://github.com/itsjavierdev/bakery-admin/assets/156542069/ea7f881d-d3ce-4986-8d35-db872114ac27)
+
+---
+### Create User or Employees View
+![image](https://github.com/itsjavierdev/bakery-admin/assets/156542069/f677a56b-6083-40f9-b785-a38b14adcab0)
+
+---
+### Update User or Employees Modal
+![image](https://github.com/itsjavierdev/bakery-admin/assets/156542069/63018673-db2e-4504-b01d-c9057ef5fe9a)
+
+---
+### Rol CRUD View
+![image](https://github.com/itsjavierdev/bakery-admin/assets/156542069/bc8ea154-5f86-4dbc-97ae-399f3000ab1f)
+
+---
+### Rol Create or Update View (with permissions)
+![image](https://github.com/itsjavierdev/bakery-admin/assets/156542069/a51a46d7-928f-413b-b4b1-e1d6ae3465fe)
+
+---
+### User profile View
+![image](https://github.com/itsjavierdev/bakery-admin/assets/156542069/ef4b856f-c459-4f7b-8b7a-0dcd9258a21a)
+
+
